@@ -1,0 +1,19 @@
+{
+  "name": "femaleinvestdevops",
+  "version": "1.0.0",
+  "description": "Technical Interview",
+  "main": "octopus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrashPanda00/FemaleInvestDevops.git"
+  },
+  "author": "Bogdan Mezei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TrashPanda00/FemaleInvestDevops/issues"
+  },
+  "homepage": "https://github.com/TrashPanda00/FemaleInvestDevops#readme"
+}
