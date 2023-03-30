@@ -3,7 +3,7 @@ const http = require("http");
 // Configuration
 const config = {
   port: process.env.PORT ?? "3000",
-  appName: "octopus",
+  appName: "octopus-test",
   appVersion: "v1.0.0",
 };
 
