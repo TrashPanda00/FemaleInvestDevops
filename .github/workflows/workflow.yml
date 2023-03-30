@@ -22,15 +22,12 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-
-      - name: Zip artifacts
-        run: zip release.zip ./* -qr
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: release.zip
+          path: .
 
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -53,7 +50,7 @@ jobs:
           app-name: 'FemaleInvestDevOps'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFE5AB0F0E81473CA42D03D8BA7960A0 }}
-          package: release.zip
+          package: .
 
   deployOnTestingEnv:
     if: github.ref != 'refs/heads/main'
@@ -76,4 +73,4 @@ jobs:
           app-name: 'FemaleInvestDevOps'
           slot-name: 'Testing'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFE5AB0F0E81473CA42D03D8BA7960A0 }}
-          package: release.zip
+          package: .
