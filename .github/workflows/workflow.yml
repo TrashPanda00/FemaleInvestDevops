@@ -1,13 +1,6 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - FemaleInvestDevOps
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+on: push
 
 jobs:
   build:
@@ -76,5 +69,5 @@ jobs:
         with:
           app-name: 'FemaleInvestDevOps'
           slot-name: 'testing'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CFE5AB0F0E81473CA42D03D8BA7960A0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_TESTING }}
           package: .
